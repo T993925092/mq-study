@@ -1,14 +1,16 @@
 package com.txl.mqstudy.thread;
 
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author tangxl
  * @CreateTime 2019/5/8 10:31
  */
-public class RabbitMQProduceThread implements Runnable{
+@Component
+public class RabbitMqProduceThread implements Runnable{
     private AmqpTemplate rabbitTemplate;
-    public RabbitMQProduceThread(AmqpTemplate rabbitTemplate) {
+    public RabbitMqProduceThread(AmqpTemplate rabbitTemplate) {
         this.rabbitTemplate=rabbitTemplate;
     }
 

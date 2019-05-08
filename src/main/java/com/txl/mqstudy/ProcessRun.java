@@ -1,19 +1,11 @@
 package com.txl.mqstudy;
 
-import com.txl.mqstudy.thread.ActiveMqProducerThread;
-import com.txl.mqstudy.thread.RabbitMQProduceThread;
+import com.txl.mqstudy.thread.RabbitMqProduceThread;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.kafka.core.ConsumerFactory;
-import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.stereotype.Component;
-
-import javax.jms.Queue;
-import javax.jms.Topic;
 
 /**
  * @Author tangxl
@@ -51,7 +43,7 @@ public class ProcessRun implements ApplicationRunner {
 //        activeProduce.setName("activeMQProduceThread");
 //        activeProduce.start();
         //rabbit
-        Thread thread=new Thread(new RabbitMQProduceThread(rabbitTemplate));
+        Thread thread=new Thread(new RabbitMqProduceThread(rabbitTemplate));
         thread.setName("rabbitProducer");
         thread.start();
 

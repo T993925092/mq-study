@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @CreateTime 2019/5/8 10:43
  */
 @Component
-public class RabbitMQConsumerListener {
+public class RabbitMqConsumerListener {
 //    @RabbitHandler
 //    @RabbitListener(queues = "notify.payment")
 //    public void receiveDirecExchange(String msg){

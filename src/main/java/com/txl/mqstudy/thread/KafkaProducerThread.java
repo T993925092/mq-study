@@ -9,15 +9,15 @@ import java.util.Random;
  * @Author tangxl
  * @CreateTime 2019/4/28 11:23
  */
-public class kafkaProducerThread implements Runnable{
+public class KafkaProducerThread implements Runnable{
     private KafkaTemplate kafkaTemplate;
     private Producer producer;
 
-    public kafkaProducerThread(KafkaTemplate kafkaTemplate) {
+    public KafkaProducerThread(KafkaTemplate kafkaTemplate) {
         this.kafkaTemplate=kafkaTemplate;
     }
 
-    public kafkaProducerThread(Producer producer) {
+    public KafkaProducerThread(Producer producer) {
         this.producer=producer;
     }
 
